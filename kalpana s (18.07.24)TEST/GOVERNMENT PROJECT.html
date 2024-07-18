@@ -1,0 +1,1044 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"> 
+    <title>My Portfolio</title> 
+    <link rel="stylesheet" 
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity= 
+"sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+             crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+    
+</head> 
+
+
+
+  
+ 
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+  
+  body { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Poppins', sans-serif; 
+  } 
+    
+  /* Header Navbar Styles */
+  .navbar { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      position: fixed; 
+      top: 0; 
+      width: 100%; 
+      background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C); 
+      background-color: transparent; 
+  } 
+    
+  .logo { 
+      padding: 0 5rem; 
+  } 
+    
+  .logo .logo-heading { 
+      color: #fff; 
+  } 
+    
+  .menu { 
+      padding: 0 5rem; 
+  } 
+    
+  .hamburger { 
+      display: none; 
+      color: #fff; 
+      font-size: 25px; 
+  } 
+    
+  .cross-icon { 
+      display: none; 
+  } 
+    
+  .menu .menu-list { 
+      display: flex; 
+      list-style: none; 
+  } 
+    
+  .menu-list .menu-list-items { 
+      padding: 0.5rem 1rem; 
+  } 
+    
+  @media screen and (min-width: 856px) and (max-width: 1024px) { 
+      .menu-list .menu-list-items { 
+          padding: 0.5rem 0.3rem; 
+      } 
+  } 
+    
+  /* Main Hero Section Styles */
+  .hero { 
+      background-image: url('./Images/heroImg3.avif'); 
+      background-repeat: no-repeat; 
+      background-size: 100% 100%; 
+      width: 100%; 
+      height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: start; 
+      margin: 4.8rem 0; 
+  } 
+    
+  .hero .intro { 
+      text-align: center; 
+      margin: 0 5rem; 
+  } 
+    
+  .hero .intro-buttons { 
+      margin: 2rem 0; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-evenly; 
+  } 
+    
+  /* About section styles */
+  .about { 
+      display: flex; 
+      align-items: center; 
+      background-image: linear-gradient(45deg, #363D73, #2794B3); 
+      justify-content: space-between; 
+      width: 100%; 
+  } 
+    
+  .about .about-text { 
+      width: 450px; 
+      color: #fff; 
+      padding: 5rem 1rem 5rem 5rem; 
+  } 
+    
+  .about .about-image img { 
+      height: 400px; 
+      width: 450px; 
+      padding: 5rem 5rem 5rem 1rem; 
+  } 
+    
+  /* Portfolio section styles */
+  .portfolio { 
+      margin: 4.8rem 0; 
+      padding: 0 5rem; 
+  } 
+    
+  .port-card { 
+      padding: 0 !important; 
+      background: none !important; 
+      border: 2px solid #000; 
+  } 
+    
+  .port-card .image { 
+      width: 100%; 
+  } 
+    
+  .port-card .image img { 
+      height: 200px; 
+      width: 100%; 
+      border-top-right-radius: 20px; 
+      border-top-left-radius: 20px; 
+  } 
+    
+  /* Services section styles */
+  .services { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-direction: column; 
+      margin: 4.8rem 0; 
+      padding: 0 5rem; 
+  } 
+    
+  .my-row { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      margin: 2rem 0; 
+  } 
+    
+  .my-row .my-col { 
+      text-align: center; 
+      width: 30%; 
+  } 
+    
+  .my-card { 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 20px; 
+      background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); 
+      padding: 1rem; 
+  } 
+    
+  .icon { 
+      height: 100px; 
+      width: 100px; 
+      border-radius: 50%; 
+      background-color: #363D73; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+  } 
+    
+  .icon svg { 
+      font-size: 30px; 
+      color: #fff; 
+  } 
+    
+  /* Contact section styles */
+  .contact { 
+      padding: 0 5rem; 
+  } 
+    
+  .contact-content { 
+      display: flex; 
+      margin: 3rem 0; 
+      justify-content: space-between; 
+  } 
+    
+  .contact-form-container { 
+      width: 50%; 
+  } 
+    
+  .contact-form { 
+      display: flex; 
+      flex-direction: column; 
+  } 
+    
+  .contact-form .form-controls { 
+      width: 80%; 
+      padding: 10px 0; 
+      margin: 1.67rem 0; 
+  } 
+    
+  .contact-form .form-btn { 
+      width: 83%; 
+  } 
+    
+  .contact-details { 
+      width: 50%; 
+  } 
+    
+  /* Footer Styles */
+  .footer { 
+      background-color: #000; 
+      color: #fff; 
+      padding: 2rem; 
+  } 
+    
+  .footer-list-items { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 50px; 
+      width: 50px; 
+      margin: 1rem 1rem 0 1rem; 
+      border-radius: 50%; 
+      background-color: #53C8B6; 
+  } 
+    
+  .footer-links { 
+      font-size: 24px; 
+      color: #fff; 
+      text-decoration: none; 
+  } 
+    
+  .social-links { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+  } 
+    
+  .footer-menu { 
+      padding: 0 5rem; 
+  } 
+    
+  .footer-menu .footer-menu-list { 
+      display: flex; 
+      list-style: none; 
+  } 
+    
+    
+    
+    
+    
+    
+  /* utility classes */
+  .greet-heading { 
+      font-size: 1.3rem; 
+      font-weight: lighter; 
+      margin: 0; 
+      letter-spacing: 1px; 
+  } 
+    
+  .my-heading { 
+      font-size: 2.5rem; 
+      margin: 0; 
+  } 
+    
+  .sub-heading { 
+      margin: 0; 
+      font-size: 0.8rem; 
+      color: #ccc; 
+      font-weight: lighter; 
+  } 
+    
+  .links:hover { 
+      border-bottom: 2px solid #fff; 
+  } 
+    
+  .links { 
+      border-bottom: 2px solid transparent; 
+      transition: all 0.25s; 
+      padding: 5px; 
+      text-decoration: none; 
+      color: #fff; 
+  } 
+    
+  .btn { 
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      letter-spacing: 1px; 
+      border: none; 
+  } 
+    
+  .common-btn { 
+      background-color: #35A99C; 
+      color: #fff; 
+      border: 2px solid #35A99C; 
+      transition: all 0.25s; 
+  } 
+    
+  .common-btn:hover { 
+      background-color: #fff; 
+      color: #35A99C; 
+      border: 2px solid #35A99C; 
+      outline: none; 
+  } 
+    
+  .ghost-btn { 
+      background-color: #fff; 
+      color: #35A99C; 
+      border: 2px solid #35A99C; 
+      outline: none; 
+  } 
+    
+  .ghost-btn:hover { 
+      background-color: #35A99C; 
+      color: #fff; 
+      transition: all 0.25s; 
+      border: 2px solid #35A99C; 
+  } 
+    
+  .heading-span { 
+      font-weight: bolder; 
+  } 
+    
+  .text-center { 
+      text-align: center; 
+  } 
+    
+  .small-para { 
+      font-size: 14px; 
+      color: #fff; 
+  } 
+    
+  .white-text { 
+      color: #fff; 
+  } 
+    
+  .blue-text { 
+      color: #363D73; 
+  }
+  @media screen and (min-width: 576px) and (max-width: 820px) { 
+    .logo { 
+        padding: 0 3rem; 
+    } 
+  
+    .hamburger { 
+        display: block; 
+        padding: 0 3rem; 
+    } 
+  
+    .menu { 
+        position: absolute; 
+        right: 0; 
+        padding: 0 3rem; 
+        top: 75px; 
+        background-image: linear-gradient(180deg, #74D7BB, #53C8B6, #35A99C); 
+        display: none; 
+        transition: all 0.25s; 
+    } 
+  
+    .menu .menu-list { 
+        flex-direction: column; 
+    } 
+  
+    .portfolio { 
+        padding: 0; 
+    } 
+  
+    .about { 
+        flex-direction: column; 
+    } 
+  
+    .about .about-text { 
+        padding: 2rem; 
+    } 
+  
+    .about .about-image img { 
+        padding: 2rem; 
+    } 
+  
+    .services { 
+        padding: 0; 
+    } 
+  
+    .my-row { 
+        gap: 10px; 
+    } 
+  
+    .my-row .my-col { 
+        text-align: center; 
+        width: 35%; 
+    } 
+  
+} 
+  
+  
+/* CSS for mobile devices */
+@media screen and (min-width: 280px) and (max-width: 576px) { 
+    .hero { 
+        justify-content: center; 
+        color: #c8c0c0; 
+        background-image: radial-gradient(circle, rgb(15 14 14 / 30%), rgb(102 96 96 / 40%), rgb(163 160 160 / 16%)), url('./Images/heroImg3.avif') 
+    } 
+  
+    .sub-heading { 
+        color: #f7f2f2cc; 
+    } 
+  
+    .hero .intro-buttons { 
+        gap: 20px; 
+    } 
+  
+    .btn { 
+        padding: 10px 30px; 
+    } 
+  
+    .logo { 
+        padding: 0 2rem; 
+    } 
+  
+    .menu { 
+        position: absolute; 
+        right: 0; 
+        padding: 0 2rem; 
+        top: 75px; 
+        background-image: linear-gradient(180deg, #35A99C, #53C8B6, #74D7BB); 
+        display: none; 
+        transition: all 0.25s; 
+    } 
+  
+    .menu .menu-list { 
+        flex-direction: column; 
+    } 
+  
+    .hamburger { 
+        display: block; 
+        padding: 0 2rem; 
+    } 
+  
+    .portfolio { 
+        padding: 0; 
+    } 
+  
+    .about { 
+        flex-direction: column; 
+    } 
+  
+    .about .about-text { 
+        width: 90%; 
+        padding: 1rem; 
+    } 
+  
+    .about .about-image img { 
+        width: 90%; 
+        padding: 1rem; 
+    } 
+  
+    .services { 
+        padding: 0; 
+    } 
+  
+    .my-row { 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        flex-direction: column; 
+        margin: 2rem 0; 
+        gap: 1rem; 
+    } 
+  
+    .my-row .my-col { 
+        text-align: center; 
+        width: 100%; 
+    } 
+  
+    .contact { 
+        padding: 0; 
+    } 
+  
+    .contact-content { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 2rem; 
+    } 
+  
+    .contact-form-container { 
+        width: 80%; 
+    } 
+  
+    .contact-form .form-controls { 
+        width: 100%; 
+    } 
+  
+    .contact-form .form-btn { 
+        width: 100%; 
+    } 
+  
+    .contact-details { 
+        width: 80%; 
+    } 
+  
+    .footer-menu { 
+        padding: 0 2rem; 
+    } 
+  
+    .footer-list-items { 
+        margin: 0; 
+    } 
+}
+    </style>
+    <script>
+        const hamburger = document.getElementById('hamburger'); 
+const menu = document.querySelector('.menu'); 
+  
+hamburger.addEventListener('click', function () { 
+    const hamIcon = this.querySelector('.hamburger-icon'); 
+    const crossIcon = this.querySelector('.cross-icon'); 
+    if (hamIcon.style.display === "none") { 
+        hamIcon.style.display = "inline-block"
+        menu.style.display = "none"
+        crossIcon.style.display = "none"
+    } 
+    else { 
+        crossIcon.style.display = "inline-block"
+        hamIcon.style.display = "none"
+        menu.style.display = "block"
+    } 
+});
+    </script>
+    <div class="banner text-center">
+        <header class="header"> 
+        <h1><span style="color: rgb(17, 25, 169); font-size: 1.7em;">1000+</span>GOVERMENT JOBS ON JOBSITE</h1>
+        <p>With verified, up-to-date job listings directly from employer websites,<br>
+    
+          <br>
+    
+          </p>
+      </div>
+    <header class="header"> 
+        <nav class="navbar"> 
+            <div class="logo"> 
+                <h2 class="logo-heading">GOVERMENT JOBS ON JOBSITE</h2> 
+            </div> 
+            <div class="hamburger" id="hamburger"> 
+                <i class="fas fa-bars hamburger-icon"></i> 
+                <i class="fas fa-times cross-icon"></i> 
+            </div> 
+            <div class="menu"> 
+                <ul class="menu-list"> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#home"> 
+                              Home 
+                          </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#TOP RECRUITERS"> 
+                              TOP RECRUITERS 
+                          </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#RECENT JOB UPDATES"> 
+                            RECENT JOB UPDATES
+                          </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#APPLY"> 
+                              APPLY
+                          </a> 
+                    </li> 
+                    <li class="menu-list-items"> 
+                        <a class="links" href="#contact"> 
+                              Contact Me 
+                          </a> 
+                    </li> 
+                </ul> 
+            </div> 
+        </nav> 
+    </header> 
+  
+    <!-- search box -->
+  <div class="search-job text-center">
+    <input type="text" class="form-control" placeholder="Skills, Job Title, Designation">
+    <input type="text" class="form-control" placeholder="Location">
+    <input type="text" class="form-control" placeholder="Experience">
+    <input type="button" class="btn btn-primary" value="Search">
+  </div>
+        <div class="image">
+            <img src="">
+           </div>
+            
+           <section>
+           
+    </section> 
+    <section class="TOP RECRUITERS" id="TOP RECRUITERS"> 
+        <div class="TOP RECRUITERS"> 
+            <h1 class="my-heading text-center">TOP RECRUITERS</h1> 
+        </div> 
+        <div class="TOP RECRUITERS"> 
+            <div class="my-row"> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="84268657.webp"
+                                 alt="Web Design Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"></h3> 
+                        <p class="small-para blue-text"></p> 
+                    </div> 
+                </div> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="New-Project-2023-11-03T125140.453.webp" 
+                                 alt="Web Development Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"> 
+                              
+                          </h3> 
+                        <p class="small-para blue-text"></p> 
+                    </div> 
+                </div> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="Tamilnadu_1200x768.avif" alt="SEO Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"></h3> 
+                        <p class="small-para blue-text"></p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="my-row"> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="Tamilnadu_1200x768.avif" 
+                                 alt="Content Writting Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"> 
+                              
+                          </h3> 
+                        <p class="small-para blue-text"></p> 
+                    </div> 
+                </div> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="images (2).jpg" 
+                                 alt="Wordpress Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"> 
+                              
+                          </h3> 
+                        <p class="small-para blue-text"> 
+                               
+                          </p> 
+                    </div> 
+                </div> 
+                <div class="my-col"> 
+                    <div class="my-card port-card"> 
+                        <div class="image"> 
+                            <img src="government-of-tamilnadu.webp" 
+                                 alt="Video Editing Image"> 
+                        </div> 
+                        <h3 class="greet-heading blue-text"> 
+                              
+                          </h3> 
+                        <p class="small-para blue-text"></p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+  
+    <!-- About Section -->
+    <section id="RECENT JOB UPDATES" class="RECENT JOB UPDATES"> 
+        <div class="RECENT JOB UPDATES-text"> 
+            <h1 class="my-heading">RECENT JOB UPDATES</h1> 
+            <ul>
+                <li><a href="" title="">Business <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Technology <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Web <span class="pull-right">13</span></a></li>
+                <li><a href="" title="">Ecommerce <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Wordpress <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Android <span class="pull-right"></span></a></li>
+                <li><a href="" title="">IOS <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Windows <span class="pull-right"></span></a></li>
+              </ul>
+            </div>
+            <div class="jobcategory category">
+              <h5 class="side-title">Jobs By Location</h5>
+              <ul>
+                <li><a href="" title="">Trichy <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Chennai <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Cuddalore <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Salem <span class="pull-right"></span></a></li>
+                <li><a href="" title="">CHENGALPATTU <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Madurai<span class="pull-right"></span></a></li>
+                <li><a href="" title="">NAMAKKAL <span class="pull-right"></span></a></li>
+                <li><a href="" title="">ERODE <span class="pull-right"></span></a></li>
+              </ul>
+            </div>
+            <div class="jobcategory category">
+              <h5 class="side-title">Jobs Types</h5>
+              <ul>
+                <li><a href="" title="">Freshers Job <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Freelancing <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Unpaid Internships <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Paid Internships <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Walk-In Jobs <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Part-Time Jobs <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Full-Time Jobs <span class="pull-right"></span></a></li>
+                <li><a href="" title="">Wrok From Home <span class="pull-right"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        </div> 
+        <div class="about-image"> 
+            <img src="904_india.jpg" alt="About Image"> 
+        </div> 
+    </section> 
+  
+    <!-- Services Section -->
+    <section class="APPLY" id="APPLY"> 
+        <div class="project-heading"> 
+            <h1 class="my-heading text-center">APPLY</h1> 
+        </div> 
+        <div class="APPLY-content"> 
+            <div class="my-row"> 
+                <div class="my-col"> 
+                    <div class="my-card"> 
+                        <div class="icon"> 
+                            <i class="fas fa-paint-brush"></i> 
+                        </div>
+                        <!-- recent jobs -->
+  <section id="jobs">
+    <div class="container">
+      <h5>RECENT JOB UPDATES</h5>
+
+      <div class="company-details">
+        <div class="job-update">
+          <h4><strong>Excutive Assistant to the chairman</strong>
+          <i class="fa fa-heart-o bookmark"><p>
+            Save Job</p></i></h4>
+          <h6>goverment sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location"> Chennai</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+      <div class="company-details">
+        <div class="job-update">
+          <h4><strong> Corporate Recruiters </strong>
+            <i class="fa fa-heart-o bookmark">
+              <p>
+                Save Job</p>
+            </i></h4>
+          <h6>goverment sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location"> Delhi</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+
+      <div class="company-details">
+        <div class="job-update">
+          <h4><strong> Sensor US IT Recruiter </strong>
+            <i class="fa fa-heart-o bookmark">
+              <p>
+                Save Job</p>
+            </i></h4>
+          <h6>geverment sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location"> Delhi</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+
+      <div class="company-details">
+        <div class="job-update">
+                    <h4><strong> Senior Python Devloper </strong>
+                      <i class="fa fa-heart-o bookmark">
+                        <p>
+                          Save Job</p>
+                      </i></h4>
+          <h6>goverment sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location"> Delhi</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+
+      <div class="company-details">
+        <div class="job-update">
+                    <h4><strong> Senior Python Devloper </strong>
+                      <i class="fa fa-heart-o bookmark">
+                        <p>
+                          Save Job</p>
+                      </i></h4>
+          <h6>goverment sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location">Coimbatore</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+
+      <div class="company-details">
+        <div class="job-update">
+                    <h4><strong> Senior Python Devloper </strong>
+                      <i class="fa fa-heart-o bookmark">
+                        <p>
+                          Save Job</p>
+                      </i></h4>
+          <h6> government sector</h6>
+          <i class="fa fa-briefcase"></i><span>0-1 years</span><br>
+          <i class="fa fa-inr"></i><span class="price"> 4.00 - 5.00 Lacs P.A</span><br>
+          <i class="fa fa-map-marker"></i><span class="location"> Cuddalore</span>
+          <p><strong>Skills</strong> <i class="fa fa-angle-double-right"></i><small> Java</small><small> Web
+              scrapping</small><small>
+              Django</small><small> Flask</small></p>
+          <p class="description"><strong>Description</strong> <i class="fa fa-angle-double-right"></i>
+            Works independently under limited supervision and applies knowledge of subject matter in Applications
+            Development. Possess sufficient knowledge and skills to effectively deal with issues, challenges within
+            field of specialization to develop simple applications solutions.
+            Second level professional with direct impact on
+            results and outcome. <a href="#"></a></p>
+        </div>
+        <div class="apply-btn">
+          <button type="button" class="btn btn-primary" target="_blank">Apply</button>
+        </div>
+      </div>
+      <ul class="pagelink text-center">
+        <li class="right-arrow">←</li>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="right-arrow">→</li>
+      </ul>
+    </div>
+  </section>
+  
+            
+                
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+  
+    <!-- Contact me section -->
+    <section class="contact" id="contact"> 
+        <div class="contact-heading"> 
+            <h1 class="my-heading text-center">Contact Me</h1> 
+        </div> 
+        <div class="contact-content"> 
+            <div class="contact-form-container"> 
+                <h1 class="greet-heading">Get In Touch</h1> 
+                <form class="contact-form"> 
+                    <input class="form-controls" type="text" 
+                           placeholder="NAME"> 
+                    <input class="form-controls" type="text" 
+                           placeholder="EMAIL"> 
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Phone">
+                            
+                    <textarea class="form-controls" 
+                              placeholder="Write your message" 
+                              name="message" id="" cols="30"
+                              rows="10"> 
+                      </textarea> 
+                    <input class="form-btn btn common-btn" 
+                           type="submit" value="SUBMIT"> 
+                </form> 
+            </div> 
+            
+  
+    <!-- Grid column -->
+    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold text-light">Employers</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Job Posting</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Advertise With Us</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Access Resumes</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">FAQs</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold text-light">Stay Connected</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+                      <!-- Facebook -->
+                      <p>
+                    <a class="fb-ic">
+                      <i class="fa fa-facebook-official white-text mr-4 text-light"><span class="icon_name">Facebook</span></i>
+                    </a>
+                    </p>
+                    <!-- Twitter -->
+                    <p>
+                    <a class="tw-ic">
+                      <i class="fa fa-twitter white-text mr-4 text-light"><span class="icon_name">Twitter</span></i>
+                    </a>
+                    </p>
+                    <!--Linkedin -->
+                    <p>
+                    <a class="li-ic">
+                      <i class="fa fa-linkedin white-text mr-4 text-light"><span class="icon_name">Linkedin</span></i>
+                    </a>
+                    </p>
+                    <!--Instagram-->
+                    <p></p>
+                    <a class="ins-ic">
+                      <i class="fa fa-instagram white-text text-light"><span class="icon_name">Instagram </span></i>
+                    </a>
+                    </p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3 text-light">@
+    <a class="dark-grey-text" href="#"> Build With Let's Upgrade</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
